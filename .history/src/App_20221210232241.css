@@ -26,6 +26,9 @@
 	border-bottom: 1px solid #dddddd;
 }
 
+.row_class{
+	background-color: #84c4b7;
+}
 
 .table-class tbody tr:nth-of-type(even) {
 	background-color: #f3f3f3;
@@ -44,9 +47,7 @@
 	text-align: center;
 }
 
-.row_class{
-	background-color: #84c4b7 !important;
-}
+
 
 .modal {
 	position: absolute;

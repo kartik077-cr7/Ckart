@@ -15,7 +15,20 @@ const Table = ({ data,headingColumns,title,handleFilter,sortedCol }) => {
 			});
 			i++;
 		}
-		return <Row	rowData={rowData} index ={index}/>
+   
+		const checkStatus = (data) => {
+			if(data.key == 'status')
+			{
+				if(data.val == 'FALSE')
+				  return 'red';
+				else 
+				  return 'green';
+			}
+			else 
+			  return '';
+		}
+
+		return <Row	rowData={rowData}/>
 	})
 
 	return (

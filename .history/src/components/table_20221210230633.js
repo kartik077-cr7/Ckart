@@ -1,9 +1,9 @@
 import React from "react";
 import Column from "./Column";
-import Row from "./Row";
+
 const Table = ({ data,headingColumns,title,handleFilter,sortedCol }) => {
 	
-	const rowDatas = data.map((row,index) => { 
+	const rowDatas = data.map((row,index) => {
 		
 		let rowData = [];
 		let i = 0;
@@ -15,7 +15,22 @@ const Table = ({ data,headingColumns,title,handleFilter,sortedCol }) => {
 			});
 			i++;
 		}
-		return <Row	rowData={rowData} index ={index}/>
+   
+		const checkStatus = (data) => {
+			if(data.key == 'status')
+			{
+				if(data.val == 'FALSE')
+				  return 'red';
+				else 
+				  return 'green';
+			}
+			else 
+			  return '';
+		}
+
+		return <tr onClick={() => console.log("clicked ",index)} key={index}>
+		{rowData.map((data, index) => <td key={index} className={checkStatus(data)}  data-heading={data.key}>{data.val}</td>)}
+	  </tr>
 	})
 
 	return (

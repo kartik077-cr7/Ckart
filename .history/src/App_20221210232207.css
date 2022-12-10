@@ -26,7 +26,6 @@
 	border-bottom: 1px solid #dddddd;
 }
 
-
 .table-class tbody tr:nth-of-type(even) {
 	background-color: #f3f3f3;
 }
@@ -45,7 +44,7 @@
 }
 
 .row_class{
-	background-color: #84c4b7 !important;
+	background-color: #84c4b7;
 }
 
 .modal {

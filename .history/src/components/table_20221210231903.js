@@ -15,7 +15,8 @@ const Table = ({ data,headingColumns,title,handleFilter,sortedCol }) => {
 			});
 			i++;
 		}
-		return <Row	rowData={rowData} index ={index}/>
+   
+		return <Row	rowData={rowData}/>
 	})
 
 	return (
